@@ -2,7 +2,11 @@ import React from 'react';
 import classes from './MenuCard.css';
 
 const menuCard = (props) => {
-  return <p>MenuCard!</p>;
+  return (
+    <div className={classes.MenuCard}>
+      <p>MenuCard!</p>
+    </div>
+  );
 };
 
 export default menuCard;
