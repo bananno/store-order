@@ -1,3 +1,7 @@
 .ShoppingCartButton {
+    height: 90%;
+}
 
+.ShoppingCartButton img {
+    height: 90%;
 }

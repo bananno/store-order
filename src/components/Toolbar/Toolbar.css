@@ -1,6 +1,6 @@
 .Toolbar {
-    margin-left: 10px;
-    margin-right: 10px;
     border: solid red;
     height: 70px;
+    width: 100%;
+    position: fixed;
 }
