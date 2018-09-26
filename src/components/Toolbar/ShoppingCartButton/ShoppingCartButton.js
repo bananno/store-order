@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './ShoppingCartButton.css';
 import shoppingCartLogo from '../../../assets/images/shopping-cart.png'
 
-const ShoppingCartButton = (props) => {
+const shoppingCartButton = (props) => {
   return (
     <div className={classes.ShoppingCartButton}>
       <img src={shoppingCartLogo}/>
@@ -11,4 +11,4 @@ const ShoppingCartButton = (props) => {
   );
 };
 
-export default ShoppingCartButton;
+export default shoppingCartButton;
