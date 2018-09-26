@@ -12,7 +12,6 @@ const layout = (props) => {
       <Menu />
       <ShoppingCart />
       <Backdrop />
-      <p>Layout!</p>
     </div>
   );
 };
