@@ -6,6 +6,7 @@
     left: 0;
     background-color: #ed6d12;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
