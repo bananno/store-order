@@ -1,10 +1,18 @@
 .ShoppingCartButton {
     height: 70%;
+    width: 55px;
     background-color: white;
     padding: 6px;
     border-radius: 10px;
+    align-items: center;
+    text-align: center;
 }
 
 .ShoppingCartButton img {
+    height: 95%;
+}
+
+.ShoppingCartButton img:hover {
     height: 100%;
+    cursor: pointer;
 }
