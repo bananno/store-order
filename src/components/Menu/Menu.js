@@ -7,12 +7,14 @@ const menu = (props) => {
   return (
     <div className={classes.Menu}>
       <p>Menu!</p>
-      {itemList.map((items) => (
-        <MenuCard name={items.name} img={items.img}/>
+      {itemList.map((items, i) => (
+        <MenuCard name={items.name} img={items.img} key={i}/>
       ))}
     </div>
   );
 };
 
 export default menu;
+
+
 
