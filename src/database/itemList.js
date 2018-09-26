@@ -17,7 +17,7 @@ const itemList = [
   },
   {
     name: "Ping Pong Ball",
-  },
+  }
 ];
 
 export default itemList;
