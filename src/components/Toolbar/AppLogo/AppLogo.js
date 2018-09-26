@@ -5,7 +5,7 @@ import sportsLogo from '../../../assets/images/logo.png'
 const appLogo = (props) => {
   return (
     <div className={classes.AppLogo}>
-      <img src={sportsLogo}/>
+      <img src={sportsLogo} alt="Sports Logo"/>
     </div>
   );
 };
