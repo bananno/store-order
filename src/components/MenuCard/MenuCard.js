@@ -4,7 +4,7 @@ import classes from './MenuCard.css';
 const menuCard = (props) => {
   return (
     <div className={classes.MenuCard}>
-      <p>MenuCard!</p>
+      <p><strong>{props.name}</strong></p>
     </div>
   );
 };

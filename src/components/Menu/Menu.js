@@ -8,7 +8,7 @@ const menu = (props) => {
     <div className={classes.Menu}>
       <p>Menu!</p>
       {itemList.map((items) => (
-        <MenuCard />
+        <MenuCard name={items.name}/>
       ))}
     </div>
   );
