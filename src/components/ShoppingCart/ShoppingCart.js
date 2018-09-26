@@ -3,7 +3,11 @@ import classes from './ShoppingCart.css';
 import itemList from '../../database/itemList.js';
 
 const ShoppingCart = (props) => {
-  return <p>ShoppingCart!</p>;
+  return (
+    <div className={classes.ShoppingCart}>
+      <p>ShoppingCart!</p>
+    </div>
+  );
 };
 
 export default ShoppingCart;
