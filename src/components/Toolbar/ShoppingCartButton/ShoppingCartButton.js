@@ -6,7 +6,6 @@ const shoppingCartButton = (props) => {
   return (
     <div className={classes.ShoppingCartButton}>
       <img src={shoppingCartLogo}/>
-      Shopping Cart
     </div>
   );
 };
