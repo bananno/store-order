@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './ShoppingCart.css';
 import itemList from '../../database/itemList.js';
 
-const ShoppingCart = (props) => {
+const shoppingCart = (props) => {
   return (
     <div className={classes.ShoppingCart}>
       <p>ShoppingCart!</p>
@@ -10,4 +10,4 @@ const ShoppingCart = (props) => {
   );
 };
 
-export default ShoppingCart;
+export default shoppingCart;

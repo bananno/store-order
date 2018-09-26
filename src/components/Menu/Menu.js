@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Menu.css';
 import itemList from '../../database/itemList.js';
 
-const Menu = (props) => {
+const menu = (props) => {
   return (
     <div className={classes.Menu}>
       <p>Menu!</p>
@@ -10,5 +10,5 @@ const Menu = (props) => {
   );
 };
 
-export default Menu;
+export default menu;
 

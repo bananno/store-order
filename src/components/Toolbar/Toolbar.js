@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Toolbar.css';
 
-const Toolbar = (props) => {
+const toolbar = (props) => {
   return (
     <div className={classes.Toolbar}>
       <p>Toolbar!</p>
@@ -9,4 +9,4 @@ const Toolbar = (props) => {
   );
 };
 
-export default Toolbar;
+export default toolbar;

@@ -5,7 +5,7 @@ import Menu from '../Menu/Menu';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import Backdrop from '../UI/Backdrop/Backdrop';
 
-const Layout = (props) => {
+const layout = (props) => {
   return (
     <div className={classes.Layout}>
       <Toolbar />
@@ -17,5 +17,5 @@ const Layout = (props) => {
   );
 };
 
-export default Layout;
+export default layout;
 

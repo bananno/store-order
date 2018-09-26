@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Backdrop.css';
 
-const Backdrop = (props) => {
+const backdrop = (props) => {
   return (
     <div className={classes.Backdrop}>
       <p>Backdrop!</p>
@@ -9,4 +9,4 @@ const Backdrop = (props) => {
   );
 };
 
-export default Backdrop;
+export default backdrop;
