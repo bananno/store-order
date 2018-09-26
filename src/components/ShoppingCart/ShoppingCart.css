@@ -1,6 +1,11 @@
 .ShoppingCart {
-    margin-left: 10px;
-    margin-right: 10px;
-    border: solid green;
-    height: 50px;
+    width: 50%;
+    border: 3px solid black;
+    margin: auto;
+}
+
+@media (min-width: 700px) {
+    .ShoppingCart {
+        width: 500px;
+    }
 }
