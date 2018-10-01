@@ -10,7 +10,7 @@ const toolbar = (props) => {
       <AppLogo/>
       <CartInfo title="Total Quantity" info="7 items"/>
       <CartInfo title="Total Price" info="$45.00"/>
-      <ShoppingCartButton/>
+      <ShoppingCartButton clickShoppingCartButton={props.clickShoppingCartButton}/>
     </div>
   );
 };
