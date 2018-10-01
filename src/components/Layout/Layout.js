@@ -6,6 +6,11 @@ import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import Backdrop from '../UI/Backdrop/Backdrop';
 
 class Layout extends Component {
+
+  state = {
+    showShoppingCart: false
+  }
+
   render() {
     return(
       <div className={classes.Layout}>
@@ -19,4 +24,6 @@ class Layout extends Component {
 }
 
 export default Layout;
+
+
 
