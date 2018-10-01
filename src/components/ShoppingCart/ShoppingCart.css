@@ -1,7 +1,9 @@
 .ShoppingCart {
     width: 50%;
     border: 3px solid black;
-    margin: auto;
+    z-index: 200;
+    position: absolute;
+    background-color: white;
 }
 
 @media (min-width: 700px) {
