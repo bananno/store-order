@@ -1,10 +1,11 @@
 .ShoppingCart {
     width: 50%;
     border: 3px solid black;
-    z-index: 200;
-    position: absolute;
-    top: 0;
+    border-radius: 10px;
     background-color: white;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 @media (min-width: 700px) {
