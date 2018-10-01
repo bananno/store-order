@@ -4,7 +4,6 @@ import Toolbar from '../Toolbar/Toolbar';
 import Menu from '../Menu/Menu';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import ModalFrame from '../UI/ModalFrame/ModalFrame';
-import Backdrop from '../UI/Backdrop/Backdrop';
 import itemList from '../../database/itemList.js';
 
 class Layout extends Component {
@@ -28,7 +27,6 @@ class Layout extends Component {
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart/>
         </ModalFrame>
-        <Backdrop show={this.state.showShoppingCart}/>
     </div>
     )
   }
