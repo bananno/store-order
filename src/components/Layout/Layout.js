@@ -24,7 +24,7 @@ class Layout extends Component {
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.shoppingCartToggleHandler}/>
       <Menu />
-      <ShoppingCart />
+        <ShoppingCart show={this.state.showShoppingCart}/>
         <Backdrop show={this.state.showShoppingCart}/>
     </div>
     )
