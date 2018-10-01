@@ -19,12 +19,18 @@ class Layout extends Component {
     });
   }
 
+  closeShoppingCart = () => {
+    this.setState({
+      showShoppingCart: false
+    });
+  }
+
   render() {
     return(
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
       <Menu />
-        <ModalFrame show={this.state.showShoppingCart}>
+        <ModalFrame show={this.state.showShoppingCart} click={this.closeShoppingCart}>
           <ShoppingCart/>
         </ModalFrame>
     </div>
