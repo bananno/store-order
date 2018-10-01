@@ -7,7 +7,6 @@ const backdrop = (props) => {
   }
   return (
     <div className={classes.Backdrop}>
-      <p>Backdrop!</p>
     </div>
   );
 };
