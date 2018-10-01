@@ -4,11 +4,13 @@ import Toolbar from '../Toolbar/Toolbar';
 import Menu from '../Menu/Menu';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import Backdrop from '../UI/Backdrop/Backdrop';
+import itemList from '../../database/itemList.js';
 
 class Layout extends Component {
 
   state = {
-    showShoppingCart: false
+    showShoppingCart: false,
+    items: initializeItemsToState()
   }
 
   render() {
@@ -21,6 +23,14 @@ class Layout extends Component {
     </div>
     )
   }
+}
+
+function initializeItemsToState() {
+  let items = {};
+  for ( let i = 0; i < itemList.length; i++ ) {
+    items[itemList[i].name] = -1;
+  }
+  return items;
 }
 
 export default Layout;
