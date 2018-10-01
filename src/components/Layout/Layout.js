@@ -3,6 +3,7 @@ import classes from './Layout.css';
 import Toolbar from '../Toolbar/Toolbar';
 import Menu from '../Menu/Menu';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
+import ModalFrame from '../UI/ModalFrame/ModalFrame';
 import Backdrop from '../UI/Backdrop/Backdrop';
 import itemList from '../../database/itemList.js';
 
@@ -24,7 +25,9 @@ class Layout extends Component {
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
       <Menu />
-        <ShoppingCart show={this.state.showShoppingCart}/>
+        <ModalFrame show={this.state.showShoppingCart}>
+          <ShoppingCart/>
+        </ModalFrame>
         <Backdrop show={this.state.showShoppingCart}/>
     </div>
     )
