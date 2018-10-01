@@ -25,7 +25,7 @@ class Layout extends Component {
         <Toolbar clickShoppingCartButton={this.shoppingCartToggleHandler}/>
       <Menu />
       <ShoppingCart />
-      <Backdrop />
+        <Backdrop show={this.state.showShoppingCart}/>
     </div>
     )
   }
