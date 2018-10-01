@@ -13,7 +13,7 @@ class Layout extends Component {
     items: initializeItemsToState()
   }
 
-  shoppingCartToggleHandler = () => {
+  openShoppingCart = () => {
     this.setState({
       showShoppingCart: true
     });
@@ -22,7 +22,7 @@ class Layout extends Component {
   render() {
     return(
       <div className={classes.Layout}>
-        <Toolbar clickShoppingCartButton={this.shoppingCartToggleHandler}/>
+        <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
       <Menu />
         <ShoppingCart show={this.state.showShoppingCart}/>
         <Backdrop show={this.state.showShoppingCart}/>
