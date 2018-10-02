@@ -25,13 +25,55 @@ class Layout extends Component {
     });
   }
 
+  increaseQuantity = (itemName) => {
+    const updatedItems = {
+      ...this.state.items
+    };
+
+    updatedItems[itemName] = this.state.items[itemName] + 1;
+
+    this.setState({
+      items: updatedItems
+    });
+  }
+
+  decreaseQuantity = (itemName) => {
+    const updatedItems = {
+      ...this.state.items
+    };
+
+    updatedItems[itemName] = this.state.items[itemName] - 1;
+
+    this.setState({
+      items: updatedItems
+    });
+  }
+
+  // addIngredientHandler = (type) => {
+  //   const oldCount = this.state.ingredients[type];
+  //   const updatedCount = oldCount + 1;
+  //   const updatedIngredients = {
+  //     ...this.state.ingredients
+  //   };
+  //   updatedIngredients[type] = updatedCount;
+  //   const priceAddition = INGREDIENT_PRICES[type];
+  //   const oldPrice = this.state.totalPrice;
+  //   const newPrice = oldPrice + priceAddition;
+  //   this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
+  //   this.updatePurchaseState(updatedIngredients);
+  // }
+
   render() {
     return(
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
         <Menu />
         <ModalFrame show={this.state.showShoppingCart}>
-          <ShoppingCart closeShoppingCart={this.closeShoppingCart} itemState={this.state.items}/>
+          <ShoppingCart
+            closeShoppingCart={this.closeShoppingCart}
+            itemState={this.state.items}
+            increaseQuantity={this.increaseQuantity}
+            decreaseQuantity={this.decreaseQuantity}/>
         </ModalFrame>
       </div>
     )

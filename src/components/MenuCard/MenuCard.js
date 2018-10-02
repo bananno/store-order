@@ -3,11 +3,19 @@ import classes from './MenuCard.css';
 
 const menuCard = (props) => {
 
+  const increaseItemQuantity = () => {
+    props.increaseQuantity(props.name);
+  }
+
+  const decreaseItemQuantity = () => {
+    props.decreaseQuantity(props.name);
+  }
+
   let shoppingCardButtons =
     <div>
-      <button className={classes.Button}>+</button>
+      <button onClick={decreaseItemQuantity} className={classes.Button}>-</button>
       <strong>{props.quantity}</strong>
-      <button className={classes.Button}>-</button>
+      <button onClick={increaseItemQuantity} className={classes.Button}>+</button>
     </div>
 
   let menuButtons =
