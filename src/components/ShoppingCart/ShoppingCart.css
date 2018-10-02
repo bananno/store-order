@@ -1,8 +1,5 @@
 .ShoppingCart {
     width: 50%;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: white;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -12,4 +9,59 @@
     .ShoppingCart {
         width: 500px;
     }
+}
+
+.ShoppingCart button {
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 3px;
+}
+
+.XButton {
+    background-color: #ed6d12;
+    height: 28px;
+    width: 28px;
+}
+
+.CheckoutButton {
+    background-color: #2bc9ce;
+}
+
+.CloseButton {
+    background-color: #ed6d12;
+}
+
+.TopBar {
+    border: 3px solid black;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-weight: bold;
+    background-color: #2bc9ce;
+    padding: 10px;
+    padding-left: 12px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainSection {
+    background-color: white;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 10px 10px;
+}
+
+.BottomBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }

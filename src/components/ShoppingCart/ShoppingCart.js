@@ -6,15 +6,21 @@ import MenuCard from '../MenuCard/MenuCard';
 const shoppingCart = (props) => {
   return (
     <div className={classes.ShoppingCart}>
-      <p>ShoppingCart</p>
-      <p>(button) X</p>
+      <div className={classes.TopBar}>
+        Shopping Cart
+        <button className={classes.XButton}>X</button>
+      </div>
 
-      {itemList.map((items, i) => (
-        <MenuCard name={items.name} img={items.img} key={i}/>
-      ))}
+      <div className={classes.MainSection}>
+        {itemList.map((items, i) => (
+          <MenuCard name={items.name} img={items.img} key={i}/>
+        ))}
 
-      <p>(button) Checkout Now</p>
-      <p>(button) Close</p>
+        <div className={classes.BottomBar}>
+          <button className={classes.CheckoutButton}>Checkout</button>
+          <button className={classes.CloseButton}>Close</button>
+        </div>
+      </div>
     </div>
   );
 };
