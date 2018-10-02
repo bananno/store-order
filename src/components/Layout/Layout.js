@@ -31,7 +31,7 @@ class Layout extends Component {
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
         <Menu />
         <ModalFrame show={this.state.showShoppingCart}>
-          <ShoppingCart closeShoppingCart={this.closeShoppingCart}/>
+          <ShoppingCart closeShoppingCart={this.closeShoppingCart} itemState={this.state.items}/>
         </ModalFrame>
       </div>
     )

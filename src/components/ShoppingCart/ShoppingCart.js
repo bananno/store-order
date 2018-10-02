@@ -13,12 +13,12 @@ const shoppingCart = (props) => {
 
       <div className={classes.MainSection}>
         {itemList.map((items, i) => (
-          <MenuCard name={items.name} img={items.img} key={i}/>
+          <MenuCard name={items.name} img={items.img} key={i} quantity={props.itemState[items.name]}/>
         ))}
 
         <div className={classes.BottomBar}>
           <button className={classes.CheckoutButton}>Checkout</button>
-          <button onClick={props.closeShoppingCart}className={classes.CloseButton}>Close</button>
+          <button onClick={props.closeShoppingCart} className={classes.CloseButton}>Close</button>
         </div>
       </div>
     </div>
