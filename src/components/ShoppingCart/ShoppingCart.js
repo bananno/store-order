@@ -8,7 +8,7 @@ const shoppingCart = (props) => {
     <div className={classes.ShoppingCart}>
       <div className={classes.TopBar}>
         Shopping Cart
-        <button className={classes.XButton}>X</button>
+        <button onClick={props.closeShoppingCart} className={classes.XButton}>X</button>
       </div>
 
       <div className={classes.MainSection}>
@@ -18,7 +18,7 @@ const shoppingCart = (props) => {
 
         <div className={classes.BottomBar}>
           <button className={classes.CheckoutButton}>Checkout</button>
-          <button className={classes.CloseButton}>Close</button>
+          <button onClick={props.closeShoppingCart}className={classes.CloseButton}>Close</button>
         </div>
       </div>
     </div>
