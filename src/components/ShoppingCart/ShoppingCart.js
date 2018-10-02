@@ -13,7 +13,7 @@ const shoppingCart = (props) => {
 
       <div className={classes.MainSection}>
         {itemList.map((items, i) => (
-          <MenuCard name={items.name} img={items.img} key={i} quantity={props.itemState[items.name]}/>
+          <MenuCard name={items.name} img={items.img} key={i} quantity={props.itemState[items.name]} shoppingCard={true}/>
         ))}
 
         <div className={classes.BottomBar}>
