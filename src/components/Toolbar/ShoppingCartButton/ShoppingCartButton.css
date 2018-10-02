@@ -9,11 +9,14 @@
     justify-content: center;
 }
 
+.ShoppingCartButton {
+    cursor: pointer;
+}
+
 .ShoppingCartButton img {
     height: 40px;
 }
 
 .ShoppingCartButton img:hover {
     height: 45px;
-    cursor: pointer;
 }
