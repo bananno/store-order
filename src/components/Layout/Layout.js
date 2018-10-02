@@ -29,11 +29,11 @@ class Layout extends Component {
     return(
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
-      <Menu />
+        <Menu />
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart/>
         </ModalFrame>
-    </div>
+      </div>
     )
   }
 }
