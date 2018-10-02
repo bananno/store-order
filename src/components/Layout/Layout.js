@@ -30,7 +30,7 @@ class Layout extends Component {
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
       <Menu />
-        <ModalFrame show={this.state.showShoppingCart} click={this.closeShoppingCart}>
+        <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart/>
         </ModalFrame>
     </div>

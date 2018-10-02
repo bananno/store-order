@@ -7,7 +7,7 @@ const modalFrame = (props) => {
   }
 
   return (
-    <div className={classes.ModalFrame} onClick={props.click}>
+    <div className={classes.ModalFrame}>
       {props.children}
     </div>
   );
