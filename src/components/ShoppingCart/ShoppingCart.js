@@ -19,7 +19,7 @@ const shoppingCart = (props) => {
             itemDes={items.itemDes}
             key={i}
             quantity={props.itemState[items.name]}
-            shoppingCard={true}
+            shoppingCart={true}
             increaseQuantity={props.increaseQuantity}
             decreaseQuantity={props.decreaseQuantity}/>
         ))}
