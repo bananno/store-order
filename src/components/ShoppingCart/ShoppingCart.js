@@ -16,6 +16,7 @@ const shoppingCart = (props) => {
           <MenuCard
             name={items.name}
             img={items.img}
+            itemDes={items.itemDes}
             key={i}
             quantity={props.itemState[items.name]}
             shoppingCard={true}

@@ -10,8 +10,8 @@
 
 .MenuCard img {
     align-items: left;
-    width: 50px;
-    height: 50px;
+    width: 50%;
+    height: 50%;
 }
 
 .Button {
@@ -21,13 +21,11 @@
 }
 
 .XButton {
-    /*background-color: #edeeef;*/
     height: 28px;
     width: 28px;
-    /*border: 1px solid black;*/
     float:right;
     position:relative;
-    /*margin:0;*/
+      /*margin:0;*/
     /*padding:0;*/
     /*overflow:hidden;*/
     background:#CCC;
@@ -35,4 +33,22 @@
     /*border:solid 2px #FFF;*/
     transition: all .3s ease-out;
     /*cursor:pointer;*/
+}
+
+.ConTainer1 {
+  float: left;
+  width: 40%;
+}
+
+.ConTainer2 {
+  margin-top: 10px;
+  float: left;
+  width: 60%;
+}
+
+.ConTainer2 p {
+  text-align: justify;
+  color: #353738;
+  font-size: 12px;
+  padding-right: 15px;
 }

@@ -27,9 +27,15 @@ const menuCard = (props) => {
 
   return (
     <div className={classes.MenuCard}>
-      {props.shoppingCard ? shoppingCardButtons : menuButtons}
-      <p><strong>{props.name}</strong></p>
-      <img src={props.img}/>
+      <div className={classes.ConTainer1}>
+        <p><strong>{props.name}</strong></p>
+        <img src={props.img}/>
+      </div>
+
+      <div className={classes.ConTainer2}>
+        {props.shoppingCard ? shoppingCardButtons : menuButtons}
+        <p>{props.itemDes}</p>
+      </div>
     </div>
   );
 };
