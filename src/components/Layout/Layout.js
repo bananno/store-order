@@ -63,12 +63,21 @@ class Layout extends Component {
   }
 
   addItemToCart = (itemName) => {
-    const num = parseInt(this.state.menuItems[itemName]);
+    const num = parseInt(this.state.menuItems[itemName] || 0);
+
+    if (num < 1) {
+      return;
+    }
+
     const updatedItems = {
       ...this.state.items
     };
 
-    updatedItems[itemName] = this.state.items[itemName] + num;
+    if (updatedItems[itemName] < 0) {
+      updatedItems[itemName] = 0;
+    }
+
+    updatedItems[itemName] += num;
 
     this.setState({
       items: updatedItems
