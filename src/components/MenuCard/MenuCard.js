@@ -54,6 +54,7 @@ const menuCard = (props) => {
     <div className={classes.MenuCard}>
       <div className={classes.ConTainer1}>
         <p><strong>{props.name}</strong></p>
+        <p>$<strong>{props.price}</strong></p>
         <img src={props.img}/>
       </div>
 

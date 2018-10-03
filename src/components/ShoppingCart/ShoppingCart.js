@@ -17,6 +17,7 @@ const shoppingCart = (props) => {
             name={items.name}
             img={items.img}
             itemDes={items.itemDes}
+            price={items.price}
             key={i}
             quantity={props.itemState[items.name]}
             shoppingCart={true}

@@ -38,6 +38,13 @@
 .ConTainer1 {
   float: left;
   width: 40%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.ConTainer1 p {
+  margin: 0px;
+  margin-bottom: 5px;
 }
 
 .ConTainer2 {

@@ -11,6 +11,7 @@ const menu = (props) => {
           name={item.name}
           img={item.img}
           itemDes={item.itemDes}
+          price={item.price}
           key={i}
           quantity={props.itemState[item.name]}
           changeMenuQuantity={props.changeMenuQuantity}
