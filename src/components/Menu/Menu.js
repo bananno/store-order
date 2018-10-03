@@ -13,7 +13,8 @@ const menu = (props) => {
           itemDes={item.itemDes}
           key={i}
           quantity={props.itemState[item.name]}
-          changeMenuQuantity={props.changeMenuQuantity}/>
+          changeMenuQuantity={props.changeMenuQuantity}
+          addItemToCart={props.addItemToCart}/>
       ))}
     </div>
   );

@@ -62,11 +62,26 @@ class Layout extends Component {
     });
   }
 
+  addItemToCart = (itemName) => {
+    const num = parseInt(this.state.menuItems[itemName]);
+    const updatedItems = {
+      ...this.state.items
+    };
+
+    updatedItems[itemName] = this.state.items[itemName] + num;
+
+    this.setState({
+      items: updatedItems
+    });
+    console.log(itemName);
+    console.log(this.state.menuItems[itemName]);
+  }
+
   render() {
     return(
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
-        <Menu itemState={this.state.menuItems} changeMenuQuantity={this.changeMenuQuantity}/>
+        <Menu itemState={this.state.menuItems} changeMenuQuantity={this.changeMenuQuantity} addItemToCart={this.addItemToCart}/>
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart
             closeShoppingCart={this.closeShoppingCart}

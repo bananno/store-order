@@ -15,6 +15,11 @@ const menuCard = (props) => {
     props.changeMenuQuantity(props.name, event.target.value);
   }
 
+  const addToCart = () => {
+    props.addItemToCart(props.name);
+  }
+
+
   let shoppingCardButtons =
     <div>
       <button onClick={decreaseItemQuantity} className={classes.Button}>-</button>
@@ -31,7 +36,7 @@ const menuCard = (props) => {
         value={props.quantity}
         className={classes.Input}
         onChange={changeItemQuantity}/>
-      <button>Add to cart</button>
+      <button onClick={addToCart}>Add to cart</button>
     </div>
 
   return (
