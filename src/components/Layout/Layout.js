@@ -50,11 +50,23 @@ class Layout extends Component {
     });
   }
 
+  changeMenuQuantity = (itemName, num) => {
+    const menuQuantity = {
+      ...this.state.menuItems
+    };
+
+    menuQuantity[itemName] = num;
+
+    this.setState({
+      menuItems: menuQuantity
+    });
+  }
+
   render() {
     return(
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
-        <Menu itemState={this.state.menuItems}/>
+        <Menu itemState={this.state.menuItems} changeMenuQuantity={this.changeMenuQuantity}/>
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart
             closeShoppingCart={this.closeShoppingCart}

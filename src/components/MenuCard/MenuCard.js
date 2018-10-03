@@ -11,6 +11,10 @@ const menuCard = (props) => {
     props.decreaseQuantity(props.name);
   }
 
+  const changeItemQuantity = (event) => {
+    props.changeMenuQuantity(props.name, event.target.value);
+  }
+
   let shoppingCardButtons =
     <div>
       <button onClick={decreaseItemQuantity} className={classes.Button}>-</button>
@@ -21,7 +25,12 @@ const menuCard = (props) => {
 
   let menuButtons =
     <div>
-      How many: <input type="number" value={props.quantity} className={classes.Input}/>
+      How many:
+      <input
+        type="number"
+        value={props.quantity}
+        className={classes.Input}
+        onChange={changeItemQuantity}/>
       <button>Add to cart</button>
     </div>
 

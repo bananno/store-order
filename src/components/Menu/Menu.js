@@ -7,7 +7,13 @@ const menu = (props) => {
   return (
     <div className={classes.Menu}>
       {itemList.map((item, i) => (
-        <MenuCard name={item.name} img={item.img} itemDes={item.itemDes} key={i} quantity={props.itemState[item.name]}/>
+        <MenuCard
+          name={item.name}
+          img={item.img}
+          itemDes={item.itemDes}
+          key={i}
+          quantity={props.itemState[item.name]}
+          changeMenuQuantity={props.changeMenuQuantity}/>
       ))}
     </div>
   );
