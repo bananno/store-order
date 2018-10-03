@@ -21,7 +21,8 @@ const shoppingCart = (props) => {
             quantity={props.itemState[items.name]}
             shoppingCart={true}
             increaseQuantity={props.increaseQuantity}
-            decreaseQuantity={props.decreaseQuantity}/>
+            decreaseQuantity={props.decreaseQuantity}
+            removeItemFromShoppingCart={props.removeItemFromShoppingCart}/>
         ))}
 
         <div className={classes.BottomBar}>

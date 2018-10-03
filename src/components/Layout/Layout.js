@@ -82,8 +82,18 @@ class Layout extends Component {
     this.setState({
       items: updatedItems
     });
-    console.log(itemName);
-    console.log(this.state.menuItems[itemName]);
+  }
+
+  removeItemFromShoppingCart = (itemName) => {
+    const updatedItems = {
+      ...this.state.items
+    };
+
+    updatedItems[itemName] = -1;
+
+    this.setState({
+      items: updatedItems
+    });
   }
 
   render() {
@@ -96,7 +106,8 @@ class Layout extends Component {
             closeShoppingCart={this.closeShoppingCart}
             itemState={this.state.items}
             increaseQuantity={this.increaseQuantity}
-            decreaseQuantity={this.decreaseQuantity}/>
+            decreaseQuantity={this.decreaseQuantity}
+            removeItemFromShoppingCart={this.removeItemFromShoppingCart}/>
         </ModalFrame>
       </div>
     )

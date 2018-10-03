@@ -22,13 +22,21 @@ const menuCard = (props) => {
     props.addItemToCart(props.name);
   }
 
+  const remove = () => {
+    props.removeItemFromShoppingCart(props.name);
+  }
+
 
   let shoppingCartButtons =
     <div>
-      <button onClick={decreaseItemQuantity} className={classes.Button}>-</button>
+      <button onClick={decreaseItemQuantity}
+        className={classes.Button}>-</button>
       <strong>{props.quantity}</strong>
-      <button onClick={increaseItemQuantity} className={classes.Button}>+</button>
-      <button className={classes.XButton}>X</button>
+      <button onClick={increaseItemQuantity}
+        className={classes.Button}>+</button>
+      <button
+        className={classes.XButton}
+        onClick={remove}>X</button>
     </div>
 
   let menuButtons =
