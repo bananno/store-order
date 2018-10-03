@@ -16,11 +16,13 @@ const menuCard = (props) => {
       <button onClick={decreaseItemQuantity} className={classes.Button}>-</button>
       <strong>{props.quantity}</strong>
       <button onClick={increaseItemQuantity} className={classes.Button}>+</button>
+      <button className={classes.XButton}>X</button>
     </div>
 
   let menuButtons =
     <div>
-      <p>MENU BUTTONS</p>
+      <input type="text"/>
+      <button>Add to cart</button>
     </div>
 
   return (
