@@ -6,8 +6,8 @@ import MenuCard from '../MenuCard/MenuCard';
 const menu = (props) => {
   return (
     <div className={classes.Menu}>
-      {itemList.map((items, i) => (
-        <MenuCard name={items.name} img={items.img} itemDes={items.itemDes} key={i}/>
+      {itemList.map((item, i) => (
+        <MenuCard name={item.name} img={item.img} itemDes={item.itemDes} key={i} quantity={props.itemState[item.name]}/>
       ))}
     </div>
   );

@@ -10,7 +10,8 @@ class Layout extends Component {
 
   state = {
     showShoppingCart: false,
-    items: initializeItemsToState()
+    items: initializeItemsToState(-1),
+    menuItems: initializeItemsToState(1)
   }
 
   openShoppingCart = () => {
@@ -53,7 +54,7 @@ class Layout extends Component {
     return(
       <div className={classes.Layout}>
         <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
-        <Menu />
+        <Menu itemState={this.state.menuItems}/>
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart
             closeShoppingCart={this.closeShoppingCart}
@@ -66,10 +67,10 @@ class Layout extends Component {
   }
 }
 
-function initializeItemsToState() {
+function initializeItemsToState(num) {
   let items = {};
   for ( let i = 0; i < itemList.length; i++ ) {
-    items[itemList[i].name] = -1;
+    items[itemList[i].name] = num;
   }
   return items;
 }
