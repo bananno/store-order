@@ -43,6 +43,10 @@ class Layout extends Component {
       ...this.state.items
     };
 
+    if (updatedItems[itemName] == 0) {
+      return;
+    }
+
     updatedItems[itemName] = this.state.items[itemName] - 1;
 
     this.setState({
