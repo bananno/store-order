@@ -30,7 +30,7 @@ const menuCard = (props) => {
   let shoppingCartButtons =
     <div>
       <button onClick={decreaseItemQuantity}
-        className={classes.Button}>-</button>
+        className={classes.Button + (props.quantity == 0 ? (" " + classes.ButtenWhenZero) : "")}>-</button>
       <strong>{props.quantity}</strong>
       <button onClick={increaseItemQuantity}
         className={classes.Button}>+</button>
