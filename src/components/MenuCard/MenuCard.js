@@ -21,7 +21,7 @@ const menuCard = (props) => {
 
   let menuButtons =
     <div>
-      <input type="text"/>
+      How many: <input type="text" placeholder="Volume" className={classes.Input}/>
       <button>Add to cart</button>
     </div>
 
