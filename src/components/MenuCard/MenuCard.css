@@ -20,6 +20,11 @@
     width: 28px;
 }
 
+.Button:disabled {
+  background:#CCC;
+  cursor: not-allowed;
+}
+
 .XButton {
     height: 28px;
     width: 28px;
@@ -65,6 +70,3 @@
   width: 40px;
 }
 
-.ButtenWhenZero {
-  background:#CCC;
-}
