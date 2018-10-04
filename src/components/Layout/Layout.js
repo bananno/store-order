@@ -8,12 +8,23 @@ import itemList from '../../database/itemList.js';
 
 class Layout extends Component {
   total = 0;
-  totalItems = 0;
 
   state = {
     showShoppingCart: false,
     items: initializeItemsToState(-1),
     menuItems: initializeItemsToState(1)
+  }
+
+  getNumItems = () => {
+    let totalItems = 0;
+    for ( let i = 0; i < itemList.length; i++) {
+      let num = this.state.items[itemList[i].name];
+
+      if (num >= 1) {
+        totalItems++;
+      }
+    }
+    return totalItems;
   }
 
   openShoppingCart = () => {
@@ -105,7 +116,7 @@ class Layout extends Component {
   render() {
     return(
       <div className={classes.Layout}>
-        <Toolbar clickShoppingCartButton={this.openShoppingCart} total={this.total} totalItems={this.totalItems}/>
+        <Toolbar clickShoppingCartButton={this.openShoppingCart} total={this.total} totalItems={this.getNumItems()}/>
         <Menu itemState={this.state.menuItems} changeMenuQuantity={this.changeMenuQuantity} addItemToCart={this.addItemToCart}/>
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart

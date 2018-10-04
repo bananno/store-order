@@ -5,12 +5,11 @@
 }
 
 .CartInfo .TotalItems {
-    margin-right: 50px;
-    text-transform: uppercase;
+    margin-left: 150px;
 }
 
 .CartInfo .Total {
-    text-align: right;
+    margin-right: 150px;
 }
 
 .CartInfo .TotalItems,
