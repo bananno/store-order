@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './MenuCard.css';
 
 const menuCard = (props) => {
-  if (props.shoppingCart == true && props.quantity < 0) {
+  if (props.shoppingCart === true && props.quantity < 0) {
     return null;
   }
 
@@ -30,7 +30,7 @@ const menuCard = (props) => {
   let shoppingCartButtons =
     <div>
       <button onClick={decreaseItemQuantity}
-        className={classes.Button} disabled={props.quantity == 0}>-</button>
+        className={classes.Button} disabled={props.quantity === 0}>-</button>
       <strong>{props.quantity}</strong>
       <button onClick={increaseItemQuantity}
         className={classes.Button}>+</button>
@@ -56,7 +56,7 @@ const menuCard = (props) => {
       <div className={classes.ConTainer1}>
         <p><strong>{props.name}</strong></p>
         <p>$<strong>{props.price}</strong></p>
-        <img src={props.img}/>
+        <img src={props.img} alt=""/>
       </div>
 
       <div className={classes.ConTainer2}>

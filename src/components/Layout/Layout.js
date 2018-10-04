@@ -31,7 +31,7 @@ class Layout extends Component {
     let totalPrice = 0;
 
     for ( let i = 0; i < itemList.length; i++) {
-      let num = parseInt(this.state.items[itemList[i].name]);
+      let num = this.state.items[itemList[i].name];
       let price = itemList[i].price;
 
       if (num < 0) {
@@ -72,7 +72,7 @@ class Layout extends Component {
       ...this.state.items
     };
 
-    if (updatedItems[itemName] == 0) {
+    if (updatedItems[itemName] === 0) {
       return;
     }
 
@@ -96,7 +96,7 @@ class Layout extends Component {
   }
 
   addItemToCart = (itemName) => {
-    const num = parseInt(this.state.menuItems[itemName] || 0);
+    const num = parseInt(this.state.menuItems[itemName], 10 || 0, 10);
 
     if (num < 1) {
       return;
