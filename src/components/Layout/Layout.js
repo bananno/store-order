@@ -21,7 +21,7 @@ class Layout extends Component {
       let num = this.state.items[itemList[i].name];
 
       if (num >= 1) {
-        totalItems++;
+        totalItems += num;
       }
     }
     return totalItems;
