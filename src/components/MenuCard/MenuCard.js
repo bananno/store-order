@@ -37,6 +37,7 @@ const menuCard = (props) => {
       <button
         className={classes.XButton}
         onClick={remove}>X</button>
+        <p><strong>Total: ${props.price * props.quantity}</strong></p>
     </div>
 
   let menuButtons =
