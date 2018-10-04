@@ -4,11 +4,11 @@ import classes from './CartInfo.css';
 const cartInfo = (props) => {
   return (
     <div className={classes.CartInfo}>
-      <div className={classes.title}>
-        {props.title}
+      <div className={classes.TotalItems}>
+        Total number of items: {props.totalItems}
       </div>
-      <div className={classes.info}>
-        {props.info}
+      <div className={classes.Total}>
+        <p><strong>Total price ${props.total}</strong></p>
       </div>
     </div>
   );

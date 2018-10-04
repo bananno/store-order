@@ -7,6 +7,8 @@ import ModalFrame from '../UI/ModalFrame/ModalFrame';
 import itemList from '../../database/itemList.js';
 
 class Layout extends Component {
+  total = 0;
+  totalItems = 0;
 
   state = {
     showShoppingCart: false,
@@ -103,7 +105,7 @@ class Layout extends Component {
   render() {
     return(
       <div className={classes.Layout}>
-        <Toolbar clickShoppingCartButton={this.openShoppingCart}/>
+        <Toolbar clickShoppingCartButton={this.openShoppingCart} total={this.total} totalItems={this.totalItems}/>
         <Menu itemState={this.state.menuItems} changeMenuQuantity={this.changeMenuQuantity} addItemToCart={this.addItemToCart}/>
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart

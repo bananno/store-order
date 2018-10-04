@@ -4,10 +4,16 @@
     display: inline-block;
 }
 
-.CartInfo .title {
+.CartInfo .TotalItems {
+    margin-right: 50px;
     text-transform: uppercase;
 }
 
-.CartInfo .info {
+.CartInfo .Total {
     text-align: right;
+}
+
+.CartInfo .TotalItems,
+.CartInfo .Total {
+    display: inline-block;
 }

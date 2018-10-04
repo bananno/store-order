@@ -8,8 +8,7 @@ const toolbar = (props) => {
   return (
     <div className={classes.Toolbar}>
       <AppLogo/>
-      <CartInfo title="Total Quantity" info="7 items"/>
-      <CartInfo title="Total Price" info="$45.00"/>
+      <CartInfo total={props.total} totalItems={props.totalItems}/>
       <ShoppingCartButton clickShoppingCartButton={props.clickShoppingCartButton}/>
     </div>
   );
