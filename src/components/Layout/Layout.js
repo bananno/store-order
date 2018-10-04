@@ -27,6 +27,22 @@ class Layout extends Component {
     return totalItems;
   }
 
+  getTotalPrice = () => {
+    let totalPrice = 0;
+
+    for ( let i = 0; i < itemList.length; i++) {
+      let num = parseInt(this.state.items[itemList[i].name]);
+      let price = itemList[i].price;
+
+      if (num < 0) {
+        num = 0;
+      }
+
+      totalPrice += num * price;
+    }
+    return totalPrice;
+  }
+
   openShoppingCart = () => {
     this.setState({
       showShoppingCart: true
@@ -116,7 +132,7 @@ class Layout extends Component {
   render() {
     return(
       <div className={classes.Layout}>
-        <Toolbar clickShoppingCartButton={this.openShoppingCart} total={this.total} totalItems={this.getNumItems()}/>
+        <Toolbar clickShoppingCartButton={this.openShoppingCart} total={this.getTotalPrice()} totalItems={this.getNumItems()}/>
         <Menu itemState={this.state.menuItems} changeMenuQuantity={this.changeMenuQuantity} addItemToCart={this.addItemToCart}/>
         <ModalFrame show={this.state.showShoppingCart}>
           <ShoppingCart
