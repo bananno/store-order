@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import classes from './Layout.css';
 import Toolbar from '../Toolbar/Toolbar';
 import Menu from '../Menu/Menu';
+import Checkout from '../Checkout/Checkout';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import ModalFrame from '../UI/ModalFrame/ModalFrame';
 import itemList from '../../database/itemList.js';
 
 class Layout extends Component {
-  total = 0;
 
   state = {
     showShoppingCart: false,
+    showCheckout: false,
     items: initializeItemsToState(-1),
     menuItems: initializeItemsToState(1)
   }
@@ -129,6 +130,13 @@ class Layout extends Component {
     });
   }
 
+  checkout = () => {
+    this.setState({
+      showCheckout: true,
+      showShoppingCart: false
+    });
+  }
+
   render() {
     return(
       <div className={classes.Layout}>
@@ -140,7 +148,11 @@ class Layout extends Component {
             itemState={this.state.items}
             increaseQuantity={this.increaseQuantity}
             decreaseQuantity={this.decreaseQuantity}
-            removeItemFromShoppingCart={this.removeItemFromShoppingCart}/>
+            removeItemFromShoppingCart={this.removeItemFromShoppingCart}
+            checkout={this.checkout}/>
+        </ModalFrame>
+        <ModalFrame show={this.state.showCheckout}>
+          <Checkout itemState={this.state.items} total={this.getTotalPrice()}/>
         </ModalFrame>
       </div>
     )

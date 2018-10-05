@@ -27,7 +27,7 @@ const shoppingCart = (props) => {
         ))}
 
         <div className={classes.BottomBar}>
-          <button className={classes.CheckoutButton}>Checkout</button>
+          <button onClick={props.checkout} className={classes.CheckoutButton}>Checkout</button>
           <button onClick={props.closeShoppingCart} className={classes.CloseButton}>Close</button>
         </div>
       </div>

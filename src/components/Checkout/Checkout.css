@@ -1,0 +1,23 @@
+.Frame {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    min-height: 30%;
+    background-color: #edeeef;
+    box-shadow: 2px 2px 2px #b8babc;
+    padding: 5px;
+}
+
+.Frame h1 {
+    text-align: center;
+}
+
+.Frame h4 {
+    margin-right: 70px;
+    text-align: right;
+}
+
+.Test {
+    text-align: center;
+}
